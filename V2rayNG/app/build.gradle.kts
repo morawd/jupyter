@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.v2ray.ang"
+    namespace = "com.v2ray.jupiter"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.v2ray.ang"
+        applicationId = "com.v2ray.jupiter"
         minSdk = 21
         targetSdk = 34
         versionCode = 542
@@ -81,6 +81,7 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar","*.jar"))))
+    implementation(files("/home/hamedpa/Downloads/libv2ray.aar"))
     testImplementation("junit:junit:4.13.2")
 
     // Androidx
@@ -121,4 +122,6 @@ dependencies {
 
     implementation("androidx.work:work-runtime-ktx:2.8.1")
     implementation("androidx.work:work-multiprocess:2.8.1")
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
+
 }
